@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove margem do body */
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo cinza muito claro */
+    color: #333; /* Texto em cinza escuro */
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+}
+
+header {
+    background-color: #444; /* Fundo cinza escuro */
+    color: white; /* Texto branco */
+    padding: 1em 0;
+}
+
+nav {
+    margin: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #444; /* Texto cinza escuro */
+    background-color: #eaeaea; /* Fundo cinza claro */
+    padding: 8px 15px; /* Espaçamento interno */
+    border: 1px solid #444; /* Borda cinza escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+
+nav ul li a:hover {
+    background-color: #444; /* Fundo cinza escuro ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
+}
+
+main {
+    flex: 1; /* Permite que o main ocupe o espaço restante */
+}
+
+section {
+    margin: 20px auto; /* Centraliza a seção */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 750px; /* Largura máxima para centralizar */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444; /* Fundo cinza escuro */
+    color: white; /* Texto branco */
+}
+
+.memory {
+    margin-bottom: 20px;
+}
+
+.memory img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333; /* Texto em cinza escuro */
+}
+
+#scrollToTop {
+    position: fixed; /* Fica fixo na tela */
+    bottom: 20px; /* Distância do fundo */
+    left: 20px; /* Distância da esquerda */
+    background-color: #333; /* Fundo cinza mais escuro */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    display: none; /* Começa invisível */
+    z-index: 1000; /* Fica na frente de outros elementos */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+
+#scrollToTop:hover {
+    background-color: #555; /* Fundo mais claro ao passar o mouse */
+}
