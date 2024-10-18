@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth; /* Adiciona rolamento suave */
+}
+
 * {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura */
 }
@@ -25,14 +29,19 @@ nav {
 }
 
 nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: center; /* Centraliza os itens */
     list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    margin: 10px; /* Espaçamento entre os itens */
+    flex: 1 1 1000px; /* Flexível, com largura mínima de 100px */
+    text-align: center; /* Centraliza o texto dentro do item */
 }
+
 
 nav ul li a {
     text-decoration: none; /* Remove o sublinhado */
@@ -86,18 +95,55 @@ h2 {
 #scrollToTop {
     position: fixed; /* Fica fixo na tela */
     bottom: 20px; /* Distância do fundo */
-    left: 20px; /* Distância da esquerda */
+    right: 20px; /* Distância da direita */
     background-color: #333; /* Fundo cinza mais escuro */
     color: white; /* Texto branco */
     border: none; /* Sem borda */
     border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px 15px; /* Espaçamento interno */
+    padding: 10px; /* Espaçamento interno */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
     display: none; /* Começa invisível */
     z-index: 1000; /* Fica na frente de outros elementos */
+    font-size: 20px; /* Tamanho da fonte */
     transition: background-color 0.3s; /* Efeito de transição */
 }
 
 #scrollToTop:hover {
     background-color: #555; /* Fundo mais claro ao passar o mouse */
+}
+
+
+/* Estilos gerais */
+
+body {
+    font-size: 16px; /* Tamanho de fonte padrão */
+}
+
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Tamanho de fonte reduzido */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+    }
+
+    #scrollToTop {
+        bottom: 10px; /* Ajusta a posição */
+        right: 10px; /* Ajusta a posição */
+    }
+}
+
+/* Para telas entre 601px e 900px */
+@media (max-width: 900px) {
+    nav ul {
+        flex-direction: row; /* Mantém a direção como linha */
+        justify-content: center; /* Centraliza os itens */
+    }
 }
